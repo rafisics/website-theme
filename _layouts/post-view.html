@@ -79,12 +79,14 @@ script_includes:
             {% endif %}
           </em>
         </span>
-
-        <div class="d-flex flex-column align-items-end">
           <!-- Read time -->
           <div style="font-size: 0.875rem;">
             {% include read-time.html content=content prompt=true lang=lang %}
           </div>
+      </div>
+
+      <div class="d-flex justify-content-between">
+        <span></span>
           <!-- pageviews -->
           <div style="font-size: 0.875rem; color: #6c757d;">
             <img 
@@ -93,8 +95,6 @@ script_includes:
               style="height: 1rem; vertical-align: middle;"
             >
           </div>
-        </div> 
-               
       </div>
     </div>
   </header>
