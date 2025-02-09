@@ -1,0 +1,33 @@
+---
+layout: default
+# All the Tags of posts.
+---
+
+{% include lang.html %}
+
+<h1 class="dynamic-title">{{ page.title }}</h1>
+
+<p>
+  Browse by:
+  <strong><a href="{{ site.baseurl }}/categories/"><i class="fa fa-fw fa-folder-open"></i> Categories</a></strong>
+  <strong><a href="{{ site.baseurl }}/tags/"><i class="fa fa-fw fa-tags"></i> Tags</a></strong>
+  <strong><a href="{{ site.baseurl }}/posts/"><i class="fa fa-fw fa-calendar"></i> Year</a></strong>
+</p>
+
+<div id="tags" class="d-flex flex-wrap mx-xl-2">
+  {% assign tags = '' | split: '' %}
+  {% for t in site.tags %}
+    {% assign tags = tags | push: t[0] %}
+  {% endfor %}
+
+  {% assign sorted_tags = tags | sort_natural %}
+
+  {% for t in sorted_tags %}
+    <div>
+      <a class="tag" href="{{ t | slugify | url_encode | prepend: '/tags/' | append: '/' | relative_url }}">
+        {{ t -}}
+        <span class="text-muted">{{ site.tags[t].size }}</span>
+      </a>
+    </div>
+  {% endfor %}
+</div>

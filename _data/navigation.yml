@@ -1,0 +1,31 @@
+- title: Home
+  url: /
+  icon: fas fa-home
+
+- title: About
+  url: /about/
+  icon: fas fa-info-circle
+
+- title: Resources
+  url: /resources/
+  icon: fas fa-bookmark
+
+- title: Posts
+  url: /posts/
+  icon: fas fa-archive
+
+- title: CV
+  url: /cv/
+  icon: fas fa-file
+
+# You can add or remove entries here as needed
+# Add hidden categories and tags
+- title: Categories
+  url: /categories/
+  icon: fas fa-folder-open
+  hidden: true
+
+- title: Tags
+  url: /tags/
+  icon: fas fa-tags
+  hidden: true
