@@ -45,6 +45,10 @@ header {
   }
 }
 
+.post-meta time {
+  @extend %text-highlight;
+}
+
 .post-tail-wrapper {
   @extend %text-sm;
 

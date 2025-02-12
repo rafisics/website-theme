@@ -22,4 +22,19 @@ layout: default
   {% else %}
     {{ content }}
   {% endif %}
+    <!-- lastmod date -->
+    {% if page.last_modified_at %}
+    <div class="post-meta text-muted text-end">
+      <span>
+        {{ site.data.locales[lang].post.updated }}
+          {% include datetime.html date=page.last_modified_at tooltip=true lang=lang %}
+      </span>
+    </div>
+    {% endif %}
+    <!-- pageviews -->
+    <div class="text-end">
+      <img  
+        src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Frafisics.github.io%2F{{ page.url }}&count_bg=%230036FF&title=Views&edge_flat=false" 
+      />
+    </div>
 </article>
