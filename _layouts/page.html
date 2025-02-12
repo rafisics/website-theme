@@ -8,7 +8,7 @@ layout: default
   {% if page.layout == 'page' or page.collection == 'pages' %}
     {% assign page_key = page.title | downcase %}
     {% assign title = site.data.locales[lang].pages[page_key] | default: page.title %}
-    <h1 class="dynamic-title">
+    <h1>
       {{ title }}
     </h1>
     <div class="content" style="text-align: justify;">
