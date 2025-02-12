@@ -8,9 +8,14 @@ layout: default
   {% if page.layout == 'page' or page.collection == 'pages' %}
     {% assign page_key = page.title | downcase %}
     {% assign title = site.data.locales[lang].pages[page_key] | default: page.title %}
-    <h1>
-      {{ title }}
-    </h1>
+    <header>
+      <h1>
+        {{ title }}
+      </h1>
+      {% if page.description %}
+      <blockquote class="prompt-info">{{ page.description }}</blockquote>
+      {% endif %}
+    </header>
     <div class="content" style="text-align: justify;">
       {{ content }}
     </div>
