@@ -4,6 +4,7 @@ author: cotes
 date: 2019-08-08 14:10:00 +0800
 categories: [Blogging, Tutorial]
 tags: [writing]
+math: true
 render_with_liquid: false
 ---
 
@@ -435,7 +436,7 @@ Or adding `render_with_liquid: false` (Requires Jekyll 4.0 or higher) to the pos
 
 ## Mathematics
 
-We use [**MathJax**][mathjax] to generate mathematics. For website performance reasons, the mathematical feature won't be loaded by default. But it can be enabled by:
+We use [**MathJax**][mathjax] to generate mathematics in $\rm\LaTeX$. For website performance reasons, the mathematical feature won't be loaded by default. But it can be enabled by:
 
 [mathjax]: https://www.mathjax.org/
 
