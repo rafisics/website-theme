@@ -11,15 +11,12 @@ last_modified_at: 2025-02-12 +0600
 {: .prompt-tip }
 
 
-<blockquote class="prompt-info" style="display: flex; " markdown="1">
+<blockquote class="prompt-info" markdown="1">
+The illustration at the page header (and showed here) is from Figure 1.1 of the book *Gravitation* by Misner, Thorne, and Wheeler (MTW).
+![Desktop View](/assets/images/header/image-light.png){: .light .w-25 .right}
+![Desktop View](/assets/images/header/image-dark.png){: .dark .w-25 .right}
 
-<span style="flex: 1; text-align: left;">
-The illustration at the top (and seen here) is from Figure 1.1 of *Gravitation* by Misner, Thorne, and Wheeler (MTW).
-</span>
+> The Riemannian geometry of the spacetime of general relativity is here symbolized by the two-dimensional geometry of the surface of an apple. The geodesic tracks followed by the ants on the apple’s surface symbolize the world line followed through spacetime by a free particle.  
 
-<div style="flex-shrink: 0; max-width: 20%;  margin-left: 20px;">
-  <img src="/assets/images/header/image-light.png" class="light">
-  <img src="/assets/images/header/image-dark.png" class="dark">
-</div>
-
+— *Excerpt from Figure 1.1 caption ([MTW, p. 4](https://press.princeton.edu/books/hardcover/9780691177793/gravitation#preview)).*
 </blockquote>
