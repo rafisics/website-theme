@@ -2,6 +2,7 @@
 @use '../abstracts/breakpoints' as bp;
 @use '../abstracts/placeholders';
 
+/* #post-list styles */
 #post-list {
   margin-top: 2rem;
 
@@ -49,7 +50,6 @@
 
       .card-title {
         @extend %text-clip;
-
         color: var(--heading-color) !important;
         font-size: 1.25rem;
       }
@@ -68,7 +68,6 @@
 
           p {
             @extend %text-clip;
-
             line-height: 1.5;
             margin: 0;
           }
@@ -90,13 +89,11 @@
 
         em {
           @extend %normal-font-style;
-
           color: inherit;
         }
 
         > div:first-child {
           display: block;
-
           @extend %text-ellipsis;
         }
       }
@@ -104,6 +101,7 @@
   }
 } /* #post-list */
 
+/* Pagination styles */
 .pagination {
   color: var(--text-color);
   font-family: Lato, sans-serif;
