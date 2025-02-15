@@ -9,6 +9,11 @@ layout: default
     {% assign page_key = page.title | downcase %}
     {% assign title = site.data.locales[lang].pages[page_key] | default: page.title %}
     <header>
+      <!-- Header images for light and dark mode -->
+      <div class="header-image">
+        <img src="{{ '/assets/images/header/image-light.png' }}" alt="Light Mode Header" class="light">
+        <img src="{{ '/assets/images/header/image-dark.png' }}" alt="Dark Mode Header" class="dark">
+      </div>
       <h1>
         {{ title }}
       </h1>
@@ -16,6 +21,7 @@ layout: default
       <blockquote class="prompt-info">{{ page.description }}</blockquote>
       {% endif %}
     </header>
+
     <div class="content" style="text-align: justify;">
       <style>
         .content ul, .content ol {
@@ -27,19 +33,21 @@ layout: default
   {% else %}
     {{ content }}
   {% endif %}
-    <!-- lastmod date -->
-    {% if page.last_modified_at %}
+  
+  <!-- lastmod date -->
+  {% if page.last_modified_at %}
     <div class="post-meta text-muted" style="text-align: right;">
       <span>
         {{ site.data.locales[lang].post.updated }}
-          {% include datetime.html date=page.last_modified_at tooltip=true lang=lang %}
+        {% include datetime.html date=page.last_modified_at tooltip=true lang=lang %}
       </span>
     </div>
-    {% endif %}
-    <!-- pageviews -->
-    <div style="text-align: right;">
-      <img  
-        src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Frafisics.github.io%2F{{ page.url }}&count_bg=%230036FF&title=Views&edge_flat=false"
-      />
-    </div>
+  {% endif %}
+  
+  <!-- pageviews -->
+  <div style="text-align: right;">
+    <img  
+      src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Frafisics.github.io%2F{{ page.url }}&count_bg=%230036FF&title=Views&edge_flat=false"
+    />
+  </div>
 </article>

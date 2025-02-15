@@ -1,0 +1,31 @@
+/* Header image styling */
+.header-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  overflow: hidden; /* Ensures the image is cropped */
+  height: 150px; /* Set a fixed height for larger screens */
+  position: relative;
+}
+
+.header-image img {
+  width: 100%;
+  height: 100%; /* Ensure the image covers the container */
+  object-fit: cover; /* Makes sure the image covers the area while cropping */
+  object-position: 50% 25%; /* Position the image so that the middle 40% is centered */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+  .header-image {
+    height: 100px; /* Slightly smaller height on mobile */
+  }
+
+  .header-image img {
+    object-position: 50% 25%; /* Keep same vertical alignment for mobile */
+  }
+}
