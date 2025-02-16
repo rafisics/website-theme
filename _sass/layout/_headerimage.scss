@@ -1,31 +1,36 @@
-/* Header image styling */
+/* Header image container */
 .header-image {
   width: 100%;
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
   overflow: hidden; /* Ensures the image is cropped */
-  height: 150px; /* Set a fixed height for larger screens */
+  height: 150px; /* Default height for larger screens */
   position: relative;
 }
 
+/* Header image styling */
 .header-image img {
   width: 100%;
-  height: 100%; /* Ensure the image covers the container */
-  object-fit: cover; /* Makes sure the image covers the area while cropping */
-  object-position: 50% 35%; 
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container while cropping */
+  object-position: 50% 35%;
   position: absolute;
   top: 0;
   left: 0;
+
+  /* Disable pointer events */
+  pointer-events: none;  /* Prevents click interactions */
+  cursor: default;       /* Disables pointer cursor */
 }
 
 /* Mobile-friendly adjustments */
 @media (max-width: 768px) {
   .header-image {
-    height: 100px; /* Slightly smaller height on mobile */
+    height: 100px; /* Reduce height for smaller screens */
   }
 
   .header-image img {
-    object-position: 50% 25%; /* Keep same vertical alignment for mobile */
+    object-position: 50% 25%; /* Adjust vertical alignment on mobile */
   }
 }
