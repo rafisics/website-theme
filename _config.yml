@@ -200,6 +200,12 @@ defaults:
   #   values:
   #     layout: page
   #     permalink: /:title/
+  - scope:
+      path: "" # An empty string here means all files in the project
+      type: pages
+    values:
+      layout: page
+      toc: true # Display TOC column in pages.
 
 sass:
   style: compressed
