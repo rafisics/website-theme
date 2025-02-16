@@ -3,6 +3,7 @@
 layout: page
 title: About
 permalink: /about/
+toc: false
 date: 2025-02-12 +0600
 last_modified_at: 2025-02-12 +0600
 ---
@@ -10,6 +11,7 @@ last_modified_at: 2025-02-12 +0600
 > Add Markdown syntax content to file `_pages/about.md`{: .filepath } and it will show up on this page.
 {: .prompt-tip }
 
+<br><br>
 
 <blockquote class="prompt-info" markdown="1">
 The illustration at the page header (and shown here) is from Figure 1.1[^1] of the book *Gravitation* by Misner, Thorne, and Wheeler (MTW).
