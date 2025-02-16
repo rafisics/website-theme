@@ -13,7 +13,7 @@ loadImg();
 initToc();
 imgPopup();
 initSidebar();
-initLocaleDatetime();
+// initLocaleDatetime();  // dark-light mode-toggle is getting disabled for it (?)
 initClipboard();
 initTopbar();
 loadMermaid();
