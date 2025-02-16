@@ -27,22 +27,6 @@ export function imgPopup() {
     return;
   }
 
-  // Exclude images in the About page from popup and prevent clicks
-  if (window.location.pathname.includes('/about')) {
-    document.querySelectorAll('.popup').forEach(img => {
-      img.classList.remove('popup');
-
-      // Prevent clicks from opening the image URL
-      img.addEventListener('click', (event) => {
-        event.preventDefault();
-      });
-
-      // Set cursor behavior to default (no pointer or image path preview)
-      img.style.pointerEvents = 'none';
-      img.style.cursor = 'default';
-    });
-  }
-
   const hasDualImages = !(
     document.querySelector('.popup.light') === null &&
     document.querySelector('.popup.dark') === null
