@@ -14,14 +14,14 @@ last_modified_at: 2025-02-12 +0600
 <br><br>
 
 <blockquote class="prompt-info" markdown="1">
-The illustration at the page header (and shown here) is from Figure 1.1[^1] of the book *Gravitation* by Misner, Thorne, and Wheeler (MTW).
+The illustration[^1] at the page header (and shown here) is by Ashley Mackenzie for Natalie Wolchover's article ["What Is a Particle?" (2020)](https://web.archive.org/web/20250108165026/https://www.quantamagazine.org/what-is-a-particle-20201112/#back7).
 
 ![Desktop View](/assets/images/header/image-light.png){: .light .w-25 .right}
 ![Desktop View](/assets/images/header/image-dark.png){: .dark .w-25 .right}
 
-> The Riemannian geometry of the spacetime of general relativity is symbolized by the two-dimensional geometry of the surface of an apple. The geodesic tracks followed by the ants on the apple’s surface symbolize the world line followed through spacetime by a free particle.  
+> The amplituhedron gives a concrete example of a theory where the description of physics using spacetime and quantum mechanics is emergent, rather than fundamental.  
 
-— *Excerpt from Figure 1.1 caption ([MTW, p. 4](https://press.princeton.edu/books/hardcover/9780691177793/gravitation#preview)).*
+— *Excerpt from ["Nima Arkani-Hamed on the Amplituhedron" (IAS, 2015)](https://www.ias.edu/ideas/nima-arkani-hamed-amplituhedron).*
 </blockquote>
 
 [^1]: This figure is used under fair use for educational purposes.
