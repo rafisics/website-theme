@@ -4,7 +4,7 @@
 # documentation.
 
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll site to Pages
+name: "Build and Deploy"
 
 on:
   # Runs on pushes targeting the default branch
@@ -34,6 +34,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4.2.0
+        with:
+          node-version: '22.x' # Use Node.js 22.x LTS version
+
+      - name: Install Dependencies (npm)
+        run: npm install
+
+      - name: Build assets
+        run: npm run build # Run the build process for assets
+
       - name: Setup Ruby
         # https://github.com/ruby/setup-ruby/releases/tag/v1.207.0
         uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
@@ -44,17 +55,6 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '22.x' # Use Node.js 22.x LTS version
-
-      - name: Install Dependencies (npm)
-        run: npm install
-
-      - name: Build assets
-        run: npm run build # Run the build process for assets
 
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
