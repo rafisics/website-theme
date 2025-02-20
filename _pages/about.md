@@ -16,8 +16,10 @@ last_modified_at: 2025-02-12 +0600
 <blockquote class="prompt-info" markdown="1">
 The illustration[^1] of at the page header (and shown here) is from ["What Is a Particle?" (2020)](https://web.archive.org/web/20250108165026/https://www.quantamagazine.org/what-is-a-particle-20201112/#back7).
 
-![Desktop View](/assets/images/header/image-light.png){: .light .w-25 .right}
-![Desktop View](/assets/images/header/image-dark.png){: .dark .w-25 .right}
+[![Alt Text](/assets/images/header/image-light.png)](https://www.quantamagazine.org/what-is-a-particle-20201112/#back7)
+{: .light .right .w-25 }
+[![Alt Text](/assets/images/header/image-dark.png)](https://www.quantamagazine.org/what-is-a-particle-20201112/#back7)
+{: .dark .right .w-25 }
 
 > The amplituhedron gives a concrete example of a theory where the description of physics using spacetime and quantum mechanics is emergent, rather than fundamental.  
 
