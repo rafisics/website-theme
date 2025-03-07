@@ -30,33 +30,33 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        ruby: ["3.3"]
     steps:
+    
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4.2.0
-        with:
-          node-version: '22.x' # Use Node.js 22.x LTS version
-
-      - name: Install Dependencies (npm)
-        run: npm install
-
-      - name: Build assets
-        run: npm run build # Run the build process for assets
 
       - name: Setup Ruby
-        # https://github.com/ruby/setup-ruby/releases/tag/v1.207.0
-        uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1' # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
-          
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+     
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-
+      - name: npm build ####
+        run: npm install && npm run build ######
+        
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
