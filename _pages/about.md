@@ -23,7 +23,7 @@ The illustration[^1] of at the page header (and shown here) is from ["What Is a 
 
 > The amplituhedron gives a concrete example of a theory where the description of physics using spacetime and quantum mechanics is emergent, rather than fundamental.  
 
-— *Excerpt from ["Nima Arkani-Hamed on the Amplituhedron" (IAS, 2015)](https://www.ias.edu/ideas/nima-arkani-hamed-amplituhedron).*
+<span style="display: block; text-align: right;">— <em>Excerpt from ["Nima Arkani-Hamed on the Amplituhedron" (IAS, 2015)](https://www.ias.edu/ideas/nima-arkani-hamed-amplituhedron).</em></span>
 </blockquote>
 
 [^1]: This figure is used under fair use for educational purposes.
