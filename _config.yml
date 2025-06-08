@@ -64,7 +64,7 @@ analytics:
   google:
     id: # fill in your Google Analytics ID
   goatcounter:
-    id: # fill in your GoatCounter ID
+    id: rafisics # fill in your GoatCounter ID
   umami:
     id: # fill in your Umami ID
     domain: # fill in your Umami domain
@@ -78,7 +78,7 @@ analytics:
 
 # Page views settings
 pageviews:
-  provider: # now only supports 'goatcounter'
+  provider: goatcounter # now only supports 'goatcounter'
 
 # Prefer color scheme setting.
 #
@@ -227,7 +227,7 @@ exclude:
   - README.md
   - LICENSE
   - purgecss.js
-  - rollup.config.js
+  - "*.config.js"
   - "package*.json"
 
 jekyll-archives:

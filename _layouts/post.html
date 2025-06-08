@@ -79,16 +79,21 @@ script_includes:
             {% endif %}
           </em>
         </span>
-        <!-- Read time -->
+
         <div>
+          <!-- pageviews -->
+          {% if site.pageviews.provider and site.analytics[site.pageviews.provider].id %}
+            <span>
+              <em id="pageviews">
+                <i class="fas fa-spinner fa-spin small"></i>
+              </em>
+              {{ site.data.locales[lang].post.pageview_measure }}
+            </span>
+          {% endif %}
+
+          <!-- read time -->
           {% include read-time.html content=content prompt=true lang=lang %}
         </div>
-      </div>
-      <!-- pageviews -->
-      <div style="text-align: right;">
-        <img  
-          src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Frafisics.github.io%2F{{ page.url }}&count_bg=%230036FF&title=Views&edge_flat=false"
-        />
       </div>
     </div>
   </header>

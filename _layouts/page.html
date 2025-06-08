@@ -1,6 +1,5 @@
 ---
 layout: default
-refactor: true
 panel_includes:
   - toc
 ---
@@ -25,25 +24,6 @@ panel_includes:
       {% if page.description %}
       <blockquote class="prompt-info">{{ page.description }}</blockquote>
     {% endif %}
-
-    <div class="post-meta text-muted">
-      {% if page.image %}
-        {% capture src %}src="{{ page.image.path | default: page.image }}"{% endcapture %}
-        {% capture class %}class="preview-img{% if page.image.no_bg %}{{ ' no-bg' }}{% endif %}"{% endcapture %}
-        {% capture alt %}alt="{{ page.image.alt | xml_escape | default: "Preview Image" }}"{% endcapture %}
-
-        {% if page.image.lqip %}
-          {%- capture lqip -%}lqip="{{ page.image.lqip }}"{%- endcapture -%}
-        {% endif %}
-
-        <div class="mt-3 mb-3">
-          <img {{ src }} {{ class }} {{ alt }} w="1200" h="630" {{ lqip }}>
-          {%- if page.image.alt -%}
-            <figcaption class="text-center pt-2 pb-2">{{ page.image.alt }}</figcaption>
-          {%- endif -%}
-        </div>
-      {% endif %}
-    </div>
     </header>
 
     {% if enable_toc %}
@@ -93,9 +73,14 @@ panel_includes:
   {% endif %}
   
   <!-- pageviews -->
-  <div style="text-align: right;">
-    <img  
-      src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Frafisics.github.io%2F{{ page.url }}&count_bg=%230036FF&title=Views&edge_flat=false"
-    />
-  </div>
+  {% if site.pageviews.provider and site.analytics[site.pageviews.provider].id %}
+    <div class="post-meta text-muted" style="text-align: right;">
+      <span>
+        <em id="pageviews">
+          <i class="fas fa-spinner fa-spin small"></i>
+        </em>
+        {{ site.data.locales[lang].post.pageview_measure }}
+      </span>
+    </div>
+  {% endif %}
 </article>
